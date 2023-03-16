@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeFragment">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/homeAppLogo"
+            android:layout_width="@dimen/logo_size"
+            android:layout_height="@dimen/logo_size"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/ic_app_logo"
+            app:layout_constraintBottom_toTopOf="@+id/homeTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/homeTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/your_earning"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/homeMyMoneyTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeAppLogo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/homeMyMoneyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/homeReferAndEarn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeTitleTextView"
+            android:text="@string/_50" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/homeMyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:drawableTop="@drawable/ic_account"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:text="@string/my_account"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/homeReferAndEarn"
+            app:layout_constraintEnd_toStartOf="@+id/homeReferAndEarn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Account" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/homeReferAndEarn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:layout_marginTop="116dp"
+            android:drawableTop="@drawable/ic_refer_and_earn"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:text="@string/refer_and_earn"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/homeLogout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/homeMyAccount"
+            app:layout_constraintTop_toBottomOf="@+id/homeMyMoneyTextView"
+            tools:text="Refer And Earn" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/homeLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeReferAndEarn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

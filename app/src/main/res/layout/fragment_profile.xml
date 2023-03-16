@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.a24rsolution.profile.ProfileViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".profile.ProfileFragment">
+
+
+        <LinearLayout
+            android:id="@+id/profileHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="@dimen/profile_size"
+                android:layout_height="@dimen/profile_size"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.profile}"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/browser_actions_bg_grey"
+                android:layout_margin="@dimen/margin"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/profileNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:textSize="@dimen/title_size"
+                android:text="@{viewModel.name}"
+                tools:text="Vijay Yadav"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileDobLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:text="@string/date_of_birth"
+            android:textStyle="bold"
+            android:textSize="@dimen/subtitle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/profileDobTextView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileDobTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            tools:text="19/07/1995"
+            android:text="@{viewModel.dob}"
+            android:textSize="@dimen/subtitle"
+            app:layout_constraintBottom_toTopOf="@+id/profileEmailTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/profileDobLabel"
+            app:layout_constraintTop_toBottomOf="@+id/profileHeader" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:text="@string/email"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/profileEmailTextView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/subtitle"
+            android:text="@{viewModel.email}"
+            tools:text="yvijay19071995@gmail.com"
+            app:layout_constraintBottom_toTopOf="@+id/profileMobileNumberTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/profileEmailLabel"
+            app:layout_constraintTop_toBottomOf="@+id/profileDobTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileMobileNumberLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:textSize="@dimen/subtitle"
+            android:text="@string/mobile_number"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/profileMobileNumberTextView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileMobileNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/subtitle"
+            android:text="@{viewModel.mobile}"
+            tools:text="7000250702"
+            app:layout_constraintBottom_toTopOf="@+id/profileEditButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/profileMobileNumberLabel"
+            app:layout_constraintTop_toBottomOf="@+id/profileEmailTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileEditButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileMobileNumberTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

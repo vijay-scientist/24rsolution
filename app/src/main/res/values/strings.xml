@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">24rsolution</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="brands">Brands</string>
+    <string name="profile">Profile</string>
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="enter_your_date_of_birth">Enter your date of birth</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="date_of_birth">Date Of Birth :-</string>
+    <string name="email">Email :-</string>
+    <string name="mobile_number">Mobile Number :-</string>
+    <string name="your_earning">Your Earning</string>
+    <string name="my_account">My Account</string>
+    <string name="refer_and_earn">Refer And Earn</string>
+    <string name="logout">Logout</string>
+    <string name="_50">50₹</string>
+    <string name="claim">Claim</string>
+    <string name="enter_your_upi_id">Enter Your UPI ID</string>
+    <string name="changing_profile">Changing profile…</string>
+    <string name="uploading">Uploading…</string>
+    <string name="refer_code_optional">Refer Code (Optional)</string>
+    <string name="claimed">Claimed</string>
+    <string name="to">UPI ID :-</string>
+    <string name="amount_of">Amount :-</string>
+    <string name="received">Received</string>
+</resources>
